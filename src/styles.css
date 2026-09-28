@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Direction: warm, calm, reassuring. Grown-up British salon, not a chain. */
+@theme {
+	--font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+	--font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+	--color-paper: #fbf7f1;
+	--color-card: #f3eee6;
+	--color-ink: #2f4a3c;
+	--color-muted: #5c6e64;
+	--color-line: #d9d0c4;
+	--color-sage: #a8bca1;
+	--color-accent: #c89b6c;
+	--color-accent-ink: #24382e;
+	--radius-card: 1rem;
+}
+
+html {
+	background: var(--color-paper);
+	color: var(--color-ink);
+	color-scheme: light only;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-sans);
+	background: var(--color-paper);
+	color: var(--color-ink);
+}
+
+summary {
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-ink);
+	outline-offset: 3px;
+}
+
+@layer components {
+	.btn {
+		@apply inline-flex min-h-12 items-center justify-center rounded-card px-5 text-center font-semibold;
+	}
+
+	.btn-primary {
+		@apply bg-accent text-accent-ink hover:brightness-95;
+	}
+
+	.btn-secondary {
+		@apply bg-ink text-paper hover:brightness-110;
+	}
+
+	.btn-outline {
+		@apply border border-ink bg-paper text-ink;
+	}
+}
