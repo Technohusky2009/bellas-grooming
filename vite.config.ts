@@ -1,19 +1,20 @@
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { nitro } from "nitro/vite";
 import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
-import { cloudflare } from "@cloudflare/vite-plugin";
-import { whop } from "@whop/cli/vite";
 
-const config = defineConfig({
-	resolve: { tsconfigPaths: true },
-	plugins: [
-		whop({ disableTanstackDevtools: true }),
-		cloudflare({ viteEnvironment: { name: "ssr" } }),
-		tailwindcss(),
-		tanstackStart(),
-		viteReact(),
-	],
+export default defineConfig({
+  server: {
+    port: 3000,
+  },
+  resolve: {
+    tsconfigPaths: true,
+  },
+  plugins: [
+    tanstackStart(),
+    nitro(),
+    tailwindcss(),
+    viteReact(),
+  ],
 });
-
-export default config;
