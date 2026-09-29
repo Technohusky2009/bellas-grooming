@@ -6,7 +6,7 @@ export const Route = createFileRoute("/grooming")({
 	head: () =>
 		pageHead(
 			`Grooming — ${site.name}`,
-			"Dog grooming in Louth, including full grooms, bath and brush, nail clipping for dogs that hate it, and cat grooming. Nervous dogs welcome. Call 01507 606863.",
+			"Dog grooming in Louth, including full grooms, bath and brush, nail clipping and gentle puppy grooming. Nervous dogs welcome. Call 01507 606863.",
 		),
 	component: Grooming,
 });
@@ -29,7 +29,7 @@ function Grooming() {
 						key={service.slug}
 						className="overflow-hidden rounded-card border border-line bg-card"
 					>
-						<PhotoSpot flushTop shoot={service.shoot} alt={service.alt} />
+						<PhotoSpot flushTop src={service.image} shoot={service.shoot} alt={service.alt} />
 						<div className="p-5 sm:p-6">
 							<h2 className="font-display text-2xl font-semibold tracking-tight">
 								{service.title}

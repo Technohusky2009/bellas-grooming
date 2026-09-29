@@ -42,9 +42,9 @@ function Home() {
 					</div>
 				</div>
 				<PhotoSpot
-					ratio="aspect-[4/5] sm:aspect-[4/3] md:aspect-[4/5]"
-					alt="Placeholder for a photograph of one calm, freshly groomed dog sitting in the salon at Bella's on Eastgate."
-					shoot="One calm, freshly groomed dog on the table in the salon. Soft window light from Eastgate. Coat finished. No bows, no costumes. The dog should look settled, not posed."
+					ratio="aspect-square"
+					src="/images/bellas-dog-grooming-puppy.jpg"
+					alt="Happy dog after grooming at Bella's Dog Grooming."
 				/>
 			</section>
 
@@ -82,7 +82,7 @@ function Home() {
 						</p>
 					</li>
 					<li className="grid gap-2 py-6 md:grid-cols-[minmax(12rem,18rem)_1fr] md:gap-10">
-						<h3 className="font-semibold">Cats groomed as well as dogs</h3>
+						<h3 className="font-semibold">Puppies welcome for gentle first grooms</h3>
 						<p className="max-w-prose leading-relaxed text-muted">
 							Cat grooming in Louth, in the same small salon. If your cat has
 							never been groomed before, say so when you book.

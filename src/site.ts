@@ -1,6 +1,6 @@
 export const site = {
 	name: "Bella's Dog Grooming & Pet Food",
-	tagline: "Gentle grooming in Louth. Dogs, and cats too.",
+	tagline: "Gentle dog grooming in Louth. Puppies welcome.",
 	phoneDisplay: "01507 606863",
 	phoneTel: "+441507606863",
 	facebookUrl: "https://www.facebook.com/shaggydogsalon",
@@ -21,11 +21,11 @@ export const site = {
 		"Bella's Dog Grooming & Pet Food — Dog and Cat Groomers in Louth",
 	seoDescription:
 		"Gentle dog and cat grooming on Eastgate in Louth. Nail clipping, full grooms and nervous-dog appointments. Open Monday to Saturday, 9am to 3pm. Call 01507 606863.",
-	footerLine: "Dog and cat grooming, 180 Eastgate, Louth.",
+	footerLine: "Dog grooming, 180 Eastgate, Louth.",
 	trust: [
 		"4.8 out of 5 from 63 Google reviews",
 		"Owners describe us as patient with nervous, anxious and difficult dogs",
-		"Cats groomed as well as dogs",
+		"Puppies welcome for gentle first grooms",
 	],
 } as const;
 
@@ -44,17 +44,17 @@ export const services = [
 		slug: "full-groom",
 		title: "Full groom",
 		line: "Clipped, washed, dried and finished.",
-		shoot:
-			"A dog being clipped on the table. Hands and clippers in the frame, the dog standing quietly. Natural light. No bows.",
-		alt: "Placeholder for a photograph of a dog being clipped during a full groom at Bella's in Louth.",
+		shoot: "Dog being groomed on the table.",
+		image: "/images/dog-grooming-bellas.jpg",
+		alt: "Dog being groomed at Bella's Dog Grooming in Louth.",
 	},
 	{
 		slug: "bath-and-brush",
 		title: "Bath and brush",
 		line: "A clean, tidy groom with no clippers.",
-		shoot:
-			"A dog in the bath, wet coat, being washed. Close enough to see the work. Calm, not staged.",
-		alt: "Placeholder for a photograph of a dog being bathed at Bella's Dog Grooming in Louth.",
+		shoot: "Dog after a professional grooming session.",
+		image: "/images/dog-being-groomed.jpg.avif",
+		alt: "Dog after grooming at Bella's Dog Grooming in Louth.",
 	},
 	{
 		slug: "nails",
@@ -63,7 +63,8 @@ export const services = [
 		note: "We are used to dogs who would rather not. It is a two-minute job when someone knows what they are doing. Dogs that will not let anyone near their paws are welcome.",
 		shoot:
 			"A close-up of paws and clippers during a real appointment. Hands in frame. No product styling.",
-		alt: "Placeholder for a close-up photograph of a dog's paws being clipped at Bella's in Louth.",
+		image: undefined,
+		alt: "Photo coming soon of nail clipping at Bella's Dog Grooming in Louth.",
 	},
 	{
 		slug: "cat-grooming",
@@ -72,7 +73,8 @@ export const services = [
 		note: "If your cat has never been groomed before, tell us when you book.",
 		shoot:
 			"A cat being groomed on the table. The handler's hands visible. The cat looking unbothered, not dressed up.",
-		alt: "Placeholder for a photograph of a cat being groomed at Bella's in Louth.",
+		image: undefined,
+		alt: "Photo coming soon of cat grooming at Bella's Dog Grooming in Louth.",
 	},
 ] as const;
 
