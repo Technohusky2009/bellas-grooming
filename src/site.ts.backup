@@ -18,9 +18,9 @@ export const site = {
 	mapsDirections:
 		"https://www.google.com/maps/dir/?api=1&destination=180%20Eastgate%2C%20Louth%2C%20Lincolnshire%20LN11%209AG",
 	seoTitle:
-		"Bella's Dog Grooming & Pet Food — Dog Groomers in Louth",
+		"Bella's Dog Grooming & Pet Food — Dog and Cat Groomers in Louth",
 	seoDescription:
-		"Gentle dog grooming on Eastgate in Louth. Full grooms, bath and brush, nail clipping and puppy grooming. Nervous dogs welcome. Open Monday to Saturday, 9am to 3pm. Call 01507 606863.",
+		"Gentle dog and cat grooming on Eastgate in Louth. Nail clipping, full grooms and nervous-dog appointments. Open Monday to Saturday, 9am to 3pm. Call 01507 606863.",
 	footerLine: "Dog grooming, 180 Eastgate, Louth.",
 	trust: [
 		"4.8 out of 5 from 63 Google reviews",
@@ -40,42 +40,42 @@ export const hoursRows = [
 ] as const;
 
 export const services = [
-  {
-    slug: "full-groom",
-    title: "Full groom",
-    line: "Clipped, washed, dried and finished.",
-    shoot: "Dog being groomed on the table.",
-    image: "/images/dog-grooming-table-louth.jpg",
-    alt: "Dog being groomed at Bella's Dog Grooming in Louth.",
-  },
-  {
-    slug: "bath-and-brush",
-    title: "Bath and brush",
-    line: "A clean, tidy groom with no clippers.",
-    shoot: "Dog after a professional grooming session.",
-    image: "/images/dog-grooming-louth.jpg",
-    alt: "Dog after grooming at Bella's Dog Grooming in Louth.",
-  },
-  {
-    slug: "nails",
-    title: "Nail clipping",
-    line: "Including for dogs that hate having their nails done.",
-    note: "We are used to dogs who would rather not. It is a two-minute job when someone knows what they are doing. Dogs that will not let anyone near their paws are welcome.",
-    shoot:
-      "A close-up of paws and clippers during a real appointment. Hands in frame. No product styling.",
-    image: undefined,
-    alt: "Photo coming soon of nail clipping at Bella's Dog Grooming in Louth.",
-  },
-  {
-    slug: "puppy-grooming",
-    title: "Puppy grooming",
-    line: "Gentle first grooms for puppies getting used to being handled, washed, dried and clipped.",
-    note: "We take puppy introductions slowly and calmly, helping them get comfortable with grooming from an early age.",
-    shoot:
-      "A puppy having a calm first grooming experience at Bella's Dog Grooming.",
-    image: "/images/bellas-dog-grooming-puppy.jpg",
-    alt: "Puppy at Bella's Dog Grooming in Louth.",
-  },
+	{
+		slug: "full-groom",
+		title: "Full groom",
+		line: "Clipped, washed, dried and finished.",
+		shoot: "Dog being groomed on the table.",
+		image: "/images/dog-grooming-bellas.jpg",
+		alt: "Dog being groomed at Bella's Dog Grooming in Louth.",
+	},
+	{
+		slug: "bath-and-brush",
+		title: "Bath and brush",
+		line: "A clean, tidy groom with no clippers.",
+		shoot: "Dog after a professional grooming session.",
+		image: "/images/dog-being-groomed.jpg.avif",
+		alt: "Dog after grooming at Bella's Dog Grooming in Louth.",
+	},
+	{
+		slug: "nails",
+		title: "Nail clipping",
+		line: "Including for dogs that hate having their nails done.",
+		note: "We are used to dogs who would rather not. It is a two-minute job when someone knows what they are doing. Dogs that will not let anyone near their paws are welcome.",
+		shoot:
+			"A close-up of paws and clippers during a real appointment. Hands in frame. No product styling.",
+		image: undefined,
+		alt: "Photo coming soon of nail clipping at Bella's Dog Grooming in Louth.",
+	},
+	{
+		slug: "cat-grooming",
+		title: "Cat grooming",
+		line: "Yes, we groom cats.",
+		note: "If your cat has never been groomed before, tell us when you book.",
+		shoot:
+			"A cat being groomed on the table. The handler's hands visible. The cat looking unbothered, not dressed up.",
+		image: undefined,
+		alt: "Photo coming soon of cat grooming at Bella's Dog Grooming in Louth.",
+	},
 ] as const;
 
 export const jsonLd = {
