@@ -63,7 +63,7 @@ function Home() {
 
 			<section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-20">
 				<h2 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
-					Nervous dogs, and cats too
+					Nervous dogs welcome
 				</h2>
 				<ul className="mt-8 divide-y divide-line border-y border-line">
 					<li className="grid gap-2 py-6 md:grid-cols-[minmax(12rem,18rem)_1fr] md:gap-10">
