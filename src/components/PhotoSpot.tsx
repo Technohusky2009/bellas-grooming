@@ -3,11 +3,13 @@ export function PhotoSpot({
   alt,
   src,
   ratio = "aspect-[4/3]",
+  position = "object-center",
 }: {
   shoot?: string;
   alt: string;
   src?: string;
   ratio?: string;
+  position?: string;
 }) {
   return (
     <figure>
@@ -18,7 +20,7 @@ export function PhotoSpot({
           <img
             src={src}
             alt={alt}
-            className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+            className={`h-full w-full object-cover ${position} transition-transform duration-500 group-hover:scale-[1.02]`}
             loading="lazy"
           />
         ) : (
