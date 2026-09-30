@@ -54,7 +54,7 @@ export const services = [
     line: "Fresh, clean and tidy without the clippers.",
     shoot: "Dog having a professional bath and brush.",
     image: "/images/bath-and-brush.jpg",
-    alt: "A dog being blow-dried after its bath.",
+    alt: "A dog being rinsed in the bath.",
   },
   {
     slug: "nails",
