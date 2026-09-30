@@ -75,7 +75,8 @@ function FindUs() {
 			<div className="mt-12 max-w-xl">
 				<PhotoSpot
 					ratio="aspect-[16/9]"
-					alt="Placeholder for a photograph of the Eastgate frontage of Bella's Dog Grooming & Pet Food at 180 Eastgate, Louth."
+					src="/images/grooming-salon.jpg"
+					alt="A freshly groomed dog standing on the grooming table."
 					shoot="The Eastgate frontage of the shop. Number 180 readable. Taken from the pavement in daylight. The street, not a studio set."
 				/>
 			</div>

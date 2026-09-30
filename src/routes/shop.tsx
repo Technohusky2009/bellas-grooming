@@ -38,7 +38,8 @@ function Shop() {
 			</div>
 			<PhotoSpot
 				ratio="aspect-[4/3]"
-				alt="Placeholder for a photograph of the pet food shelves inside 180 Eastgate, Louth."
+				src="/images/pet-food-bowl.jpg"
+				alt="A bowl of dog food."
 				shoot="The pet food shelves inside 180 Eastgate. Straight-on, everyday stock on the shelves. No brand names pushed at the camera. Warm shop light."
 			/>
 		</div>
