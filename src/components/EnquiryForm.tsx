@@ -12,19 +12,74 @@ const services = [
 const fieldClass =
 	"mt-1.5 w-full min-h-12 rounded-card border border-line bg-paper px-3 text-base text-ink placeholder:text-muted/70";
 
+// Web3Forms access key. This is a public key (Web3Forms expects it in the
+// browser) and it is locked to the inbox it was issued for, so it is safe to
+// keep as the built-in default: the site then delivers even when no build-time
+// environment variable is present. Set VITE_WEB3FORMS_KEY to override it.
+const ACCESS_KEY =
+	(import.meta.env.VITE_WEB3FORMS_KEY as string | undefined) ??
+	"4219ef69-aa13-4456-a684-2528e2b018dd";
+
 export function EnquiryForm() {
 	const [submitted, setSubmitted] = useState<{
 		name: string;
 		phone: string;
 	} | null>(null);
+	const [sending, setSending] = useState(false);
+	const [error, setError] = useState<string | null>(null);
 
-	function onSubmit(event: FormEvent<HTMLFormElement>) {
+	async function onSubmit(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
 		const data = new FormData(event.currentTarget);
 		const name = String(data.get("name") ?? "").trim();
 		const phone = String(data.get("phone") ?? "").trim();
 		if (!name || !phone) return;
-		setSubmitted({ name, phone });
+
+		if (!ACCESS_KEY) {
+			setError(
+				"This form is not connected yet. Please ring us instead and we will book you in.",
+			);
+			return;
+		}
+
+		setError(null);
+		setSending(true);
+		try {
+			const payload: Record<string, string> = {
+				access_key: ACCESS_KEY,
+				subject: `Website enquiry from ${name}`,
+				from_name: "Bella's Dog Grooming website",
+			};
+			for (const [key, value] of data.entries()) {
+				if (key === "botcheck") continue;
+				payload[key] = String(value);
+			}
+
+			const response = await fetch("https://api.web3forms.com/submit", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+				},
+				body: JSON.stringify(payload),
+			});
+			const result = (await response.json()) as {
+				success?: boolean;
+				message?: string;
+			};
+			if (!response.ok || !result.success) {
+				throw new Error(result.message || "The enquiry could not be sent.");
+			}
+			setSubmitted({ name, phone });
+		} catch (err) {
+			setError(
+				err instanceof Error && err.message
+					? err.message
+					: "Something went wrong sending that. Please ring us instead.",
+			);
+		} finally {
+			setSending(false);
+		}
 	}
 
 	if (submitted) {
@@ -57,6 +112,16 @@ export function EnquiryForm() {
 			className="rounded-card border border-line bg-card p-5 sm:p-8"
 			noValidate={false}
 		>
+			{/* Bot trap — hidden from people, filled in by scrapers. */}
+			<input
+				type="checkbox"
+				name="botcheck"
+				className="hidden"
+				style={{ display: "none" }}
+				tabIndex={-1}
+				autoComplete="off"
+			/>
+
 			<p className="rounded-card bg-sage/40 px-4 py-3 text-sm leading-relaxed">
 				This is an enquiry, not a confirmed appointment. We will ring you back
 				to agree a time.
@@ -164,8 +229,21 @@ export function EnquiryForm() {
 				</label>
 			</div>
 
-			<button type="submit" className="btn btn-primary mt-8 w-full sm:w-auto">
-				Send enquiry
+			{error ? (
+				<p
+					role="alert"
+					className="mt-6 rounded-card border border-red-300 bg-red-50 px-4 py-3 text-sm leading-relaxed text-red-800"
+				>
+					{error}
+				</p>
+			) : null}
+
+			<button
+				type="submit"
+				disabled={sending}
+				className="btn btn-primary mt-8 w-full sm:w-auto disabled:opacity-60"
+			>
+				{sending ? "Sending…" : "Send enquiry"}
 			</button>
 		</form>
 	);
