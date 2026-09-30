@@ -45,7 +45,7 @@ export const services = [
     title: "Full groom",
     line: "Clipped, washed, dried and finished with care.",
     shoot: "Dog being groomed on the table.",
-    image: "/images/full-groom.jpg",
+    image: "/images/full-groom-westie.jpg",
     alt: "A freshly groomed west highland terrier.",
   },
   {
