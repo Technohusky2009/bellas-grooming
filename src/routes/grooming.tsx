@@ -18,7 +18,7 @@ function Grooming() {
 				Grooming
 			</h1>
 			<p className="mt-6 max-w-2xl text-lg leading-relaxed text-pretty">
-				Dog grooming in Louth, and puppy grooming too. If your dog is nervous,
+				Dog grooming in Louth, and cat grooming too. If your dog is nervous,
 				anxious, elderly or has been turned away elsewhere, tell us. That is
 				the sort of appointment we are good at.
 			</p>
