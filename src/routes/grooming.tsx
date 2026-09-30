@@ -44,8 +44,10 @@ function Grooming() {
 								{service.title}
 							</h2>
 							<p className="mt-2 leading-relaxed">{service.line}</p>
-							{"note" in service && service.note ? (
-								<p className="mt-4 leading-relaxed text-muted">{service.note}</p>
+							{(service as { note?: string }).note ? (
+								<p className="mt-4 leading-relaxed text-muted">
+									{(service as { note?: string }).note}
+								</p>
 							) : null}
 						</div>
 					</article>

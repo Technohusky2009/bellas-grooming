@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HoursTable } from "../components/HoursTable";
-import { PhotoSpot } from "../components/PhotoSpot";
 import { pageHead, site } from "../site";
 
 export const Route = createFileRoute("/find-us")({
@@ -70,15 +69,6 @@ function FindUs() {
 					</div>
 				</div>
 				<HoursTable />
-			</div>
-
-			<div className="mt-12 max-w-xl">
-				<PhotoSpot
-					ratio="aspect-[16/9]"
-					src="/images/grooming-salon.jpg"
-					alt="A freshly groomed dog standing on the grooming table."
-					shoot="The Eastgate frontage of the shop. Number 180 readable. Taken from the pavement in daylight. The street, not a studio set."
-				/>
 			</div>
 		</div>
 	);

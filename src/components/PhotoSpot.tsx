@@ -1,5 +1,4 @@
 export function PhotoSpot({
-  shoot,
   alt,
   src,
   ratio = "aspect-[4/3]",
